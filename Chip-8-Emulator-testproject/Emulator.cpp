@@ -9,10 +9,13 @@ int main(int argc, char **argv)
 	ALGraphics graphics(640);
 	graphics.init();
 
-	while(true)
-	{
+	bool closeGame = false;
 
+	while(!closeGame)
+	{
+		closeGame = graphics.HandleInput();
 	}
+
 	return 0;
 }
 

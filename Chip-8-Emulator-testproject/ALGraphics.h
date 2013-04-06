@@ -15,4 +15,6 @@ class ALGraphics
 		ALGraphics();
 		ALGraphics(int width);
 		bool init();
+		bool HandleInput();
+		bool CleanUp();
 };

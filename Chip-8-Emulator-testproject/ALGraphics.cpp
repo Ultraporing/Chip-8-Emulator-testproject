@@ -65,11 +65,56 @@ bool ALGraphics::init()
 	al_register_event_source(eventQueue, al_get_keyboard_event_source());
 
 	al_set_target_bitmap(al_get_backbuffer(display));
-	al_clear_to_color(al_map_rgb(0, 255, 0));
+	al_clear_to_color(al_map_rgb(0, 0, 0));
 	al_flip_display();
 
 	al_start_timer(timer);
 
+
+	return true;
+}
+
+bool ALGraphics::HandleInput()
+{
+	ALLEGRO_EVENT ev;
+	al_wait_for_event(eventQueue, &ev);
+
+	if (ev.type == ALLEGRO_EVENT_TIMER)
+	{
+		redraw = true;
+	}
+	else if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE)
+	{
+		return CleanUp();
+	}
+	else if (ev.type == ALLEGRO_EVENT_KEY_DOWN)
+	{
+		// keycode stuff set to true
+	}
+	else if (ev.type == ALLEGRO_EVENT_KEY_UP)
+	{
+		// keycode stuff set to false
+	}
+
+	if (redraw && al_is_event_queue_empty(eventQueue))
+	{
+		redraw = false;
+
+		al_clear_to_color(al_map_rgb(0, 0, 0));
+
+		// draw emu stuff
+
+		al_flip_display();
+	}
+
+	return false;
+}
+
+bool ALGraphics::CleanUp()
+{
+	al_destroy_timer(timer);
+	al_destroy_display(display);
+	al_destroy_event_queue(eventQueue);
 
 	return true;
 }
