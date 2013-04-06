@@ -2,24 +2,28 @@
 #include "Chip8.h"
 #include "ALGraphics.h"
 
-Chip8 myChip8;
+
 
 int main(int argc, char **argv)
 {
-	ALGraphics graphics(640);
+	Chip8 myChip8;
+	ALGraphics graphics(10);
 	graphics.init();
+	myChip8.initialize();
 
 	bool closeGame = false;
 
+	if (argc > 1)
+	{
+		myChip8.loadApplication(argv[1]);
+	}
+	
+
 	while(!closeGame)
 	{
-		closeGame = graphics.HandleInput();
+		myChip8.emulateCycle();
+		closeGame = graphics.HandleInput(myChip8);
 	}
 
 	return 0;
-}
-
-bool setupGraphics()
-{
-	return true;
 }

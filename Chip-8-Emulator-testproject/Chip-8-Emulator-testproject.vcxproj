@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ALGraphics.cpp" />
+    <ClCompile Include="Chip8.cpp" />
     <ClCompile Include="Emulator.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
