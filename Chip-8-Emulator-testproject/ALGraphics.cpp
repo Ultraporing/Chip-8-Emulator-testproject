@@ -11,6 +11,7 @@ ALGraphics::ALGraphics()
 	WIDTH = 64;
 	HEIGHT = 32;
 	modifier = 1;
+	pixel = NULL;
 }
 
 ALGraphics::ALGraphics(int mod)
@@ -23,6 +24,7 @@ ALGraphics::ALGraphics(int mod)
 	redraw = true;
 	WIDTH = 64 * modifier;
 	HEIGHT = 32 * modifier;
+	pixel = NULL;
 }
 
 bool ALGraphics::init()
@@ -46,6 +48,8 @@ bool ALGraphics::init()
 		return false;
 	}
 
+	al_set_new_display_flags(ALLEGRO_WINDOWED | ALLEGRO_DIRECT3D_INTERNAL);
+
 	display = al_create_display(WIDTH, HEIGHT);
 	if (!display)
 	{
@@ -53,6 +57,9 @@ bool ALGraphics::init()
 		al_destroy_timer(timer);
 		return false;
 	}
+	
+	
+	
 
 	eventQueue = al_create_event_queue();
 	if (!eventQueue)
@@ -68,6 +75,10 @@ bool ALGraphics::init()
 	al_register_event_source(eventQueue, al_get_display_event_source(display));
 	al_register_event_source(eventQueue, al_get_timer_event_source(timer));
 	al_register_event_source(eventQueue, al_get_keyboard_event_source());
+
+	pixel = al_create_bitmap(modifier, modifier);
+	al_set_target_bitmap(pixel);
+	al_draw_filled_rectangle(0, 0, modifier, modifier, al_map_rgb(255, 255, 255));
 
 	al_set_target_bitmap(al_get_backbuffer(display));
 	al_clear_to_color(al_map_rgb(0, 0, 0));
@@ -143,8 +154,6 @@ bool ALGraphics::HandleInput(Chip8& chip8)
 		// keycode stuff set to false
 	}
 
-	
-
 	if (chip8.drawFlag && al_is_event_queue_empty(eventQueue))
 	{
 		chip8.drawFlag = false;
@@ -153,35 +162,15 @@ bool ALGraphics::HandleInput(Chip8& chip8)
 
 		for(int y = 0; y < 32; ++y)		
 			for(int x = 0; x < 64; ++x)
-				if(chip8.gfx[(y * 64) + x] == 0)
+			{
+				if(!chip8.gfx[(y * 64) + x] == 0)
 				{
-					
-					//al_draw_filled_rectangle(x, x, y, y, al_map_rgb(0, 0, 0));
-					//screenData[y][x][0] = screenData[y][x][1] = screenData[y][x][2] = 0;	// Disabled
-					for (int yp = 0; yp < modifier; yp++)
-					{
-						for (int xp = 0; xp < modifier; xp++)
-						{
-							al_draw_pixel(((x)*modifier)+xp, ((y)*modifier)+yp, al_map_rgb(0, 0, 0));
-						}
-					}
+					al_draw_bitmap(pixel, x*modifier, y*modifier, ALLEGRO_VIDEO_BITMAP);
 				}	
-				else 
-				{
-					
-					//al_draw_filled_rectangle(x, x, y, y, al_map_rgb(255, 255, 255));
-					// screenData[y][x][0] = screenData[y][x][1] = screenData[y][x][2] = 255;  // Enabled
-					for (int yp = 0; yp < modifier; yp++)
-					{
-						for (int xp = 0; xp < modifier; xp++)
-						{
-							al_draw_pixel(((x)*modifier)+xp, ((y)*modifier)+yp, al_map_rgb(255, 255, 255));
-						}
-					}
-				}
-					
+			}
 
-		al_flip_display();
+
+			al_flip_display();
 	}
 
 	return false;
@@ -189,6 +178,7 @@ bool ALGraphics::HandleInput(Chip8& chip8)
 
 bool ALGraphics::CleanUp()
 {
+	al_destroy_bitmap(pixel);
 	al_destroy_timer(timer);
 	al_destroy_display(display);
 	al_destroy_event_queue(eventQueue);

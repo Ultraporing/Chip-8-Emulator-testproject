@@ -258,10 +258,7 @@ void Chip8::emulateCycle()
 			{
 			case 0x009E: // EX9E: Skips the next instruction if the key stored in VX is pressed
 				if(key[V[(opcode & 0x0F00) >> 8]] != 0)
-				{
-					printf("key pressed");
 					pc += 4;
-				}
 				else
 					pc += 2;
 				break;
@@ -291,15 +288,13 @@ void Chip8::emulateCycle()
 					bool keyPress = false;
 
 					for(int i = 0; i < 16; ++i)
-					{
-						printf("Key: " + i);
+					{			
 						if(key[i] != 0)
 						{
 							V[(opcode & 0x0F00) >> 8] = i;
 							keyPress = true;
 						}
 					}
-					printf("\n");
 					// If we didn't received a keypress, skip this cycle and try again.
 					if(!keyPress)						
 						return;

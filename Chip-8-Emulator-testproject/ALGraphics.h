@@ -13,6 +13,7 @@ class ALGraphics
 		ALLEGRO_DISPLAY *display;
 		ALLEGRO_EVENT_QUEUE *eventQueue;
 		ALLEGRO_TIMER *timer;
+		ALLEGRO_BITMAP *pixel;
 	
 	public:
 		ALGraphics();
