@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <allegro5/allegro_audio.h>
+#include <allegro5/allegro_acodec.h>
 
 class Chip8
 {
@@ -41,6 +43,8 @@ class Chip8
 		unsigned char key[16];
 
 		bool drawFlag;
+
+		ALLEGRO_SAMPLE *beepSound;
 
 		Chip8();
 		void initialize();

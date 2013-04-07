@@ -1,23 +1,30 @@
-﻿Der Buildvorgang wurde am 4/7/2013 12:55:38 AM gestartet.
-     1>Projekt "C:\Users\Chain\Documents\Visual Studio 2010\Projects\Chip-8-Emulator-testproject\Chip-8-Emulator-testproject\Chip-8-Emulator-testproject.vcxproj" auf Knoten "2", build Ziel(e).
+﻿Der Buildvorgang wurde am 4/7/2013 1:56:07 AM gestartet.
+     1>Projekt "C:\Users\Chain\documents\visual studio 2010\Projects\Chip-8-Emulator-testproject\Chip-8-Emulator-testproject\Chip-8-Emulator-testproject.vcxproj" auf Knoten "2", build Ziel(e).
      1>InitializeBuildStatus:
          "Debug\Chip-8-Emulator-testproject.unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Emulator.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ALGraphics.cpp Chip8.cpp Emulator.cpp
+         Chip8.cpp
+     1>c:\users\chain\documents\visual studio 2010\projects\chip-8-emulator-testproject\chip-8-emulator-testproject\chip8.cpp(394): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234): Siehe Deklaration von 'fopen'
+         Code wird generiert...
+         Kompilieren...
          Emulator.cpp
+         ALGraphics.cpp
+         Code wird generiert...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Chain\Documents\Visual Studio 2010\Projects\Chip-8-Emulator-testproject\Debug\Chip-8-Emulator-testproject.exe" /NOLOGO "allegro-5.0.8-monolith-mt-debug.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Chip-8-Emulator-testproject.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Chain\Documents\Visual Studio 2010\Projects\Chip-8-Emulator-testproject\Debug\Chip-8-Emulator-testproject.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Chain\Documents\Visual Studio 2010\Projects\Chip-8-Emulator-testproject\Debug\Chip-8-Emulator-testproject.lib" /MACHINE:X86 Debug\ALGraphics.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Chain\documents\visual studio 2010\Projects\Chip-8-Emulator-testproject\Debug\Chip-8-Emulator-testproject.exe" /NOLOGO "allegro-5.0.8-monolith-mt-debug.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Chip-8-Emulator-testproject.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Chain\documents\visual studio 2010\Projects\Chip-8-Emulator-testproject\Debug\Chip-8-Emulator-testproject.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Chain\documents\visual studio 2010\Projects\Chip-8-Emulator-testproject\Debug\Chip-8-Emulator-testproject.lib" /MACHINE:X86 Debug\ALGraphics.obj
          Debug\Chip8.obj
-         Debug\Emulator.obj /SUBSYSTEM:WINDOWS 
-         LINK : C:\Users\Chain\Documents\Visual Studio 2010\Projects\Chip-8-Emulator-testproject\Debug\Chip-8-Emulator-testproject.exe wurde nicht gefunden oder beim letzten inkrementellen Linkvorgang nicht erstellt; vollständiger Link wird durchgeführt.
-         Chip-8-Emulator-testproject.vcxproj -> C:\Users\Chain\Documents\Visual Studio 2010\Projects\Chip-8-Emulator-testproject\Debug\Chip-8-Emulator-testproject.exe
+         Debug\Emulator.obj
+         LINK : C:\Users\Chain\documents\visual studio 2010\Projects\Chip-8-Emulator-testproject\Debug\Chip-8-Emulator-testproject.exe wurde nicht gefunden oder beim letzten inkrementellen Linkvorgang nicht erstellt; vollständiger Link wird durchgeführt.
+         Chip-8-Emulator-testproject.vcxproj -> C:\Users\Chain\documents\visual studio 2010\Projects\Chip-8-Emulator-testproject\Debug\Chip-8-Emulator-testproject.exe
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Chain\Documents\Visual Studio 2010\Projects\Chip-8-Emulator-testproject\Debug\Chip-8-Emulator-testproject.exe;#1" /manifest "Debug\Chip-8-Emulator-testproject.exe.intermediate.manifest"
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Chain\documents\visual studio 2010\Projects\Chip-8-Emulator-testproject\Debug\Chip-8-Emulator-testproject.exe;#1" /manifest "Debug\Chip-8-Emulator-testproject.exe.intermediate.manifest"
        FinalizeBuildStatus:
          Die Datei "Debug\Chip-8-Emulator-testproject.unsuccessfulbuild" wird gelöscht.
          Aktualisieren des Timestamps von "Debug\Chip-8-Emulator-testproject.lastbuildstate".
-     1>Die Erstellung des Projekts "C:\Users\Chain\Documents\Visual Studio 2010\Projects\Chip-8-Emulator-testproject\Chip-8-Emulator-testproject\Chip-8-Emulator-testproject.vcxproj" ist abgeschlossen, build Ziel(e).
+     1>Die Erstellung des Projekts "C:\Users\Chain\documents\visual studio 2010\Projects\Chip-8-Emulator-testproject\Chip-8-Emulator-testproject\Chip-8-Emulator-testproject.vcxproj" ist abgeschlossen, build Ziel(e).
 
 Das Erstellen war erfolgreich.
 
-Verstrichene Zeit 00:00:01.29
+Verstrichene Zeit 00:00:02.27

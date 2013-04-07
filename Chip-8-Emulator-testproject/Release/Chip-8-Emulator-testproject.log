@@ -1,24 +1,28 @@
-﻿Der Buildvorgang wurde am 4/7/2013 12:57:10 AM gestartet.
-     1>Projekt "C:\Users\Chain\Documents\Visual Studio 2010\Projects\Chip-8-Emulator-testproject\Chip-8-Emulator-testproject\Chip-8-Emulator-testproject.vcxproj" auf Knoten "2", build Ziel(e).
+﻿Der Buildvorgang wurde am 4/7/2013 1:58:46 AM gestartet.
+     1>Projekt "C:\Users\Chain\documents\visual studio 2010\Projects\Chip-8-Emulator-testproject\Chip-8-Emulator-testproject\Chip-8-Emulator-testproject.vcxproj" auf Knoten "2", build Ziel(e).
      1>InitializeBuildStatus:
          "Release\Chip-8-Emulator-testproject.unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
        ClCompile:
-         Alle Ausgaben sind aktuell.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ALGraphics.cpp Chip8.cpp Emulator.cpp
+         ALGraphics.cpp
+         Chip8.cpp
+     1>Chip8.cpp(394): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234): Siehe Deklaration von 'fopen'
+         Emulator.cpp
        Link:
-         Alle Ausgaben sind aktuell.
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Chain\Documents\Visual Studio 2010\Projects\Chip-8-Emulator-testproject\Release\Chip-8-Emulator-testproject.exe" /NOLOGO "allegro-5.0.8-monolith-mt.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\Chip-8-Emulator-testproject.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Chain\Documents\Visual Studio 2010\Projects\Chip-8-Emulator-testproject\Release\Chip-8-Emulator-testproject.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Chain\Documents\Visual Studio 2010\Projects\Chip-8-Emulator-testproject\Release\Chip-8-Emulator-testproject.lib" /MACHINE:X86 Release\ALGraphics.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Chain\documents\visual studio 2010\Projects\Chip-8-Emulator-testproject\Release\Chip-8-Emulator-testproject.exe" /NOLOGO "allegro-5.0.8-monolith-mt.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\Chip-8-Emulator-testproject.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Chain\documents\visual studio 2010\Projects\Chip-8-Emulator-testproject\Release\Chip-8-Emulator-testproject.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Chain\documents\visual studio 2010\Projects\Chip-8-Emulator-testproject\Release\Chip-8-Emulator-testproject.lib" /MACHINE:X86 Release\ALGraphics.obj
          Release\Chip8.obj
          Release\Emulator.obj /SUBSYSTEM:WINDOWS 
          Code wird generiert.
          Codegenerierung ist abgeschlossen.
-         Chip-8-Emulator-testproject.vcxproj -> C:\Users\Chain\Documents\Visual Studio 2010\Projects\Chip-8-Emulator-testproject\Release\Chip-8-Emulator-testproject.exe
+         Chip-8-Emulator-testproject.vcxproj -> C:\Users\Chain\documents\visual studio 2010\Projects\Chip-8-Emulator-testproject\Release\Chip-8-Emulator-testproject.exe
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Chain\Documents\Visual Studio 2010\Projects\Chip-8-Emulator-testproject\Release\Chip-8-Emulator-testproject.exe;#1" /manifest "Release\Chip-8-Emulator-testproject.exe.intermediate.manifest"
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Chain\documents\visual studio 2010\Projects\Chip-8-Emulator-testproject\Release\Chip-8-Emulator-testproject.exe;#1" /manifest "Release\Chip-8-Emulator-testproject.exe.intermediate.manifest"
        FinalizeBuildStatus:
          Die Datei "Release\Chip-8-Emulator-testproject.unsuccessfulbuild" wird gelöscht.
          Aktualisieren des Timestamps von "Release\Chip-8-Emulator-testproject.lastbuildstate".
-     1>Die Erstellung des Projekts "C:\Users\Chain\Documents\Visual Studio 2010\Projects\Chip-8-Emulator-testproject\Chip-8-Emulator-testproject\Chip-8-Emulator-testproject.vcxproj" ist abgeschlossen, build Ziel(e).
+     1>Die Erstellung des Projekts "C:\Users\Chain\documents\visual studio 2010\Projects\Chip-8-Emulator-testproject\Chip-8-Emulator-testproject\Chip-8-Emulator-testproject.vcxproj" ist abgeschlossen, build Ziel(e).
 
 Das Erstellen war erfolgreich.
 
-Verstrichene Zeit 00:00:00.46
+Verstrichene Zeit 00:00:01.99

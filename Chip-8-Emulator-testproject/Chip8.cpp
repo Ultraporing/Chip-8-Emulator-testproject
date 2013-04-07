@@ -59,6 +59,17 @@ void Chip8::initialize()
 	// clear screen once
 	drawFlag = true;
 
+	al_install_audio();
+	al_init_acodec_addon();
+	al_reserve_samples(1);
+
+	beepSound = NULL;
+	beepSound = al_load_sample("beep.wav");
+	if (!beepSound)
+	{
+		printf("unable to find beep.wav");
+	}
+
 	srand(time(NULL));
 
 }
@@ -368,7 +379,8 @@ void Chip8::emulateCycle()
 	if(sound_timer > 0)
 	{
 		if(sound_timer == 1)
-			printf("BEEP!\n");
+			al_play_sample(beepSound, 1.0f, 0.0f, 1.0f, ALLEGRO_PLAYMODE_ONCE, NULL);
+			//printf("BEEP!\n");
 		--sound_timer;
 	}
 	
